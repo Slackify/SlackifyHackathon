@@ -1,0 +1,22 @@
+{
+  "name": "slackify",
+  "version": "1.0.0",
+  "description": "Application to convert borning emails into fun slack messages :)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Slackify/SlackifyHackathon.git"
+  },
+  "author": "Slackify Team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Slackify/SlackifyHackathon/issues"
+  },
+  "homepage": "https://github.com/Slackify/SlackifyHackathon#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

@@ -1,15 +1,15 @@
-const express = require('express')
-const app = express()
-const port = 8080
-const path = require('path')
-const hbs = require('hbs')
-const bodyParser = require("body-parser")
+const express = require('express');
+const app = express();
+const port = 3000;
+const path = require('path');
+const hbs = require('hbs');
+const bodyParser = require("body-parser");
 
 
 //Define paths for Express config
 const publicDirectoryPath = path.join(__dirname, '../public');
-const viewsPath = path.join(__dirname, '../templates/views')
-const partialsPath = path.join(__dirname, '../templates/partials')
+const viewsPath = path.join(__dirname, '../templates/views');
+const partialsPath = path.join(__dirname, '../templates/partials');
 
 
 //Setup handlebars engine and views location
@@ -25,12 +25,10 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.get('', (req, res) => {
+    res.render('index')
+});
 
-        res.render('index')
+app.get('/', (req, res) => res.send('Hello World!'));
 
-        });
-
-app.get('/', (req, res) => res.send('Hello World!'))
-
-app.listen(port, () => console.log(`Hey team Slackify! Express app listeing on port ${port}!`))
+app.listen(port, () => console.log(`Hey team Slackify! Express app listeing on port ${port}!`));
 

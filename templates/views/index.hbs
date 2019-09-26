@@ -1,12 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Slackify-me!</title>
-</head>
+<html lang="en" dir="ltr">
+{{>header}}
 <body>
-I am pretty sick
+<section id="title">
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-md navbar-dark">
+            <a class="navbar-brand" href="/">Virtual Dealership</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="">View Inventory</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/signup">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="row">
+            <div class="col-lg-7">
+                <h1 class="big-heading">Order your favourite car 🚗 here on your device</h1>
+                {{!-- <button type="button" class="btn btn-dark btn-lg download-button"><i class="fab fa-apple"></i> Mobile
+                    App</button>
+                <button type="button" class="btn btn-outline-light btn-lg download-button"><i
+                        class="fab fa-google-play"></i>
+                    Coming Soon</button> --}}
+            </div>
+            <div class="col-lg-5">
+                <img src="/img/car.svg" alt="car" class="title-image">
+            </div>
+        </div>
+    </div>
+</section>
+<section id="features">
+    <div class="row">
+        <div class="col-lg-4 feature-box">
+            <i class="icon fas fa-check-circle"></i>
+            <h3>Easy to use.</h3>
+            <p>So easy to use, even QRM could do it.</p>
+        </div>
+        <div class="col-lg-4 feature-box">
+            <i class="icon fas fa-bullseye"></i>
+            <h3>Elite cars</h3>
+            <p>We have all the cars, the greatest cars.</p>
+        </div>
+        <div class="col-lg-4 feature-box">
+            <i class="icon fas fa-heart"></i>
+            <h3>Guaranteed to work.</h3>
+            <p>Deliver your car in style or your money back.</p>
+        </div>
+    </div>
+</section>
+<section id="testimonials">
+    <div id="testimonial-carousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <h2>I no longer have to visit my local dealership. I've found the hottest Virtual Dealership in town.
+                    Pow!</h2>
+                <img class="testimonial-image" src="/img/boy.svg" alt="man-profile">
+                <em>Chad, London</em>
+            </div>
+            <div class="carousel-item">
+                <h2 class="testimonial-text">My life used to be so lonely, but with Virtual Dealership, I have been
+                    buzzing all the time. I think.</h2>
+                <img class="testimonial-image" src="/img/girl.svg" alt="lady-profile">
+                <em>Tracy, Warrington</em>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#testimonial-carousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span> </a>
+        <a class="carousel-control-next" href="#testimonial-carousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon"></span></a>
+    </div>
+</section>
+<section id="tryNow">
+    <div class="container">
+        <h2>Inventory</h2>
+        <div class="row">
+            {{#each carData}}
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        {{!-- <img class="card-img-top" src={{this.imageURL.[0].outsideImage}} alt="Card image cap"> --}}
+                        <img class="card-img-top"
+                             src={{this.imageURL.[0].outsideImage}}
+                             alt="Card image cap">
+                        <div class="card-body">
+                            <h3>{{this.model.modelId}}</h3>
+                            <p class="card-text">This is a very cool car description</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a class="btn btn-sm btn-outline-secondary"
+                                       href="/car/{{this.inventoryId}}">View</a>
+                                </div>
+                                <small class="text-muted">{{this.availability}}</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+</section>
+<!-- Call to Action -->
+<section id="cta">
+    <div class="container">
+        <h3 class="cta-heading">Find your destined cars today</h3>
+        <button type="button" class="btn btn-dark btn-lg download-button"><i class="fab fa-apple"></i>
+            Mobile App
+        </button>
+        <button type="button" class="btn btn-light btn-lg download-button"><i class="fab fa-google-play"></i>
+            Coming Soon
+        </button>
+    </div>
+</section>
 </body>
+{{>footer}}
 </html>

@@ -75,13 +75,14 @@ p {
 }
 
 button {
+    border-radius: 5px 5px 5px 5px;
     background-color: #602369;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 100%;
+    width: 50%;
 }
 
 button:hover {
@@ -209,6 +210,7 @@ button:hover {
     padding-top: 20px;
 }
 
+/* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */

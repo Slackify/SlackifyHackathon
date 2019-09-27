@@ -28,7 +28,21 @@ app.get('', (req, res) => {
     res.render('index')
 });
 
+app.get('/trynow', (req, res) => {
+    res.render('try-now')
+});
+
+app.get('/login', (req, res) => {
+    res.render('login')
+});
+
+app.get('/signup', (req, res) => {
+    res.render('sign-up')
+});
+
+
 app.get('/', (req, res) => res.send('Hello World!'));
+
 
 app.listen(port, () => console.log(`Hey team Slackify! Express app listeing on port ${port}!`));
 

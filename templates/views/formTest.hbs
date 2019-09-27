@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Slackify-me!</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+</head>
+<body>
+    <textarea id='textInput' type='text' style='height:100px; width:200px'></textarea>
+    <br>
+    <input type='submit'value='Slackify me!'id="convert"></input>
+    <br>
+    <h2>Your message slackified:</h2>
+    <div id='result'>
+    <div id='emojiMessage'></div>
+
+<br>
+<input type='submit' value='send me to slack' id='slack'></input>
+<input type='submit' value='try different emojis' id='tryAgain'></input>
+    <script src="./js/convertTextToEmoji.js"></script>
+    </div>
+</body>
+</html>

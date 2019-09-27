@@ -4,6 +4,8 @@ const port = 3000;
 const path = require('path');
 const hbs = require('hbs');
 const bodyParser = require("body-parser");
+const translate = require('moji-translate')
+const env = require('dotenv').config();
 
 
 //Define paths for Express config
@@ -29,7 +31,7 @@ app.get('', (req, res) => {
 });
 
 app.get('/trynow', (req, res) => {
-    res.render('try-now')
+    res.render('try-now', { SlackAuthKey: process.env.SlackAuthKey} )
 });
 
 app.get('/login', (req, res) => {
@@ -40,9 +42,12 @@ app.get('/signup', (req, res) => {
     res.render('sign-up')
 });
 
+app.get('/emoji/:message', (req, res) => {
+    res.send(translate.translate(req.params['message']))
 
-app.get('/', (req, res) => res.send('Hello World!'));
+});
 
 
 app.listen(port, () => console.log(`Hey team Slackify! Express app listeing on port ${port}!`));
+
 

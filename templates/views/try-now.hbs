@@ -1,37 +1,25 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+    <head>
+    </head>
 {{>header}}
 <body>
 <section id="title">
     <div class="container-fluid">
-
-        <div class="row">
-            <div class="col-lg-7">
-                <h1 class="big-heading">Order your favourite car 🚗 here on your device</h1>
-            </div>
-            <div class="col-lg-5">
-            </div>
-        </div>
     </div>
 </section>
 <section id="features">
-    <div class="row">
-        <div class="col-lg-4 feature-box">
-            <i class="icon fas fa-check-circle"></i>
-            <h3>Easy to use.</h3>
-            <p>So easy to use, even QRM could do it.</p>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Enter text to Slackify:</label>
+            <input type="text" class="form-control" id="textInput" placeholder="your message">
+            <small id="emailHelp" class="form-text text-muted">We won't send it just yet, you can approve your message first</small>
         </div>
-        <div class="col-lg-4 feature-box">
-            <i class="icon fas fa-bullseye"></i>
-            <h3>Elite cars</h3>
-            <p>We have all the cars, the greatest cars.</p>
+        <div class="result">
+            <h3 id="resultTitle"></h3>
+            <span style="font-size:4rem;width:100%;" id='emojiMessage'></span>
+                <button type="submit" class="btn btn-primary" id="convert">Slackify!</button>
+                <div id="submitButton"></div>
         </div>
-        <div class="col-lg-4 feature-box">
-            <i class="icon fas fa-heart"></i>
-            <h3>Guaranteed to work.</h3>
-            <p>Deliver your car in style or your money back.</p>
-        </div>
-    </div>
 </section>
 <section id="testimonials">
     <div id="testimonial-carousel" class="carousel slide" data-ride="carousel">
@@ -39,13 +27,13 @@
             <div class="carousel-item active">
                 <h2>I no longer have to visit my local dealership. I've found the hottest Virtual Dealership in town.
                     Pow!</h2>
-                <img class="testimonial-image" src="/public/img/boy.svg" alt="man-profile">
+                <img class="testimonial-image" src="/img/boy.svg" alt="man-profile">
                 <em>Chad, London</em>
             </div>
             <div class="carousel-item">
                 <h2 class="testimonial-text">My life used to be so lonely, but with Virtual Dealership, I have been
                     buzzing all the time. I think.</h2>
-                <img class="testimonial-image" src="/public/img/girl.svg" alt="lady-profile">
+                <img class="testimonial-image" src="/img/girl.svg" alt="lady-profile">
                 <em>Tracy, Warrington</em>
             </div>
         </div>
@@ -95,6 +83,13 @@
         </button>
     </div>
 </section>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <script src="./js/convertTextToEmoji.js"></script>
+    {{!-- <script>
+        console.log('{{SlackAuthKey}}')
+    </script> --}}
 </body>
 {{>footer}}
 </html>

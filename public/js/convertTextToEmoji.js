@@ -6,7 +6,7 @@ $(document).ready(function() {
             url:'https://slack.com/api/chat.postMessage',
             type: "POST",
             data: {
-                "token" : 'xoxp-140168250439-479776639701-734857237043-997ce44f79add25b19bbdc5cc6ebe670',
+                "token" : '',
                 "channel": "GK08B28MQ",
                  "text": response
             },
@@ -27,6 +27,7 @@ $(document).ready(function() {
     })
 
     $('#convert').on('click', function() {
+         console.log('{{SlackAuthKey}}')
         var text = $('#textInput').val()
         $('#resultTitle').html("Your message in slack talk:")
         $('#convert').html("Try again")

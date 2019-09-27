@@ -4,6 +4,7 @@ const port = 3000;
 const path = require('path');
 const hbs = require('hbs');
 const bodyParser = require("body-parser");
+const translate = require('moji-translate')
 
 
 //Define paths for Express config

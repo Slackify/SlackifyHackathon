@@ -6,7 +6,7 @@ $(document).ready(function() {
             url:'https://slack.com/api/chat.postMessage',
             type: "POST",
             data: {
-                "token" : '',
+                "token" : 'xoxp-140168250439-479776639701-769245066753-57cb4a57fc493787bc7228c945d0878f',
                 "channel": "GK08B28MQ",
                  "text": response
             },

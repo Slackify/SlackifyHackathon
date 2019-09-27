@@ -1,0 +1,44 @@
+<button onclick="document.getElementById('signup').style.display='block'" style="width:auto;">Register</button>
+
+<!-- The Modal (contains the Sign Up form) -->
+<div id="wrapper">
+    <div id="signup" class="modal">
+        <form class="modal-content animate" action="/action_page.php">
+            <div class="container">
+                <div class="imgcontainer">
+                                <span onclick="document.getElementById('signup').style.display='none'" class="close"
+                                      title="Close Modal">&times;</span>
+                </div>
+                <h1>Register</h1>
+                <p class="change_link">
+                    Already have an account? Sign in here.
+                </p>
+                <hr>
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <label for="psw-repeat"><b>Repeat Password</b></label>
+                <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+                <label>
+                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px">
+                    Remember me
+                </label>
+
+                <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms &
+                    Privacy</a>.</p>
+
+                <div class="clearfix">
+                    <button type="submit" class="signup">Sign Up</button>
+                    <button type="button"
+                            onclick="document.getElementById('signup').style.display='none'"
+                            class="cancelbtn">Cancel
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

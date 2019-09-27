@@ -1,6 +1,6 @@
 $(document).ready(function() {
-    $('#convert').on('click', function() {
-      convertMessage($('#textInput').val());
+
+    function sendToSlack(){
      $.get('/emoji/' + $('#textInput').val(), function(response) {
         $.ajax({
             url:'https://slack.com/api/chat.postMessage',
@@ -19,14 +19,28 @@ $(document).ready(function() {
             } 
         })
      }) 
-    })
+    }
 
     $('#tryAgain').on('click', function() {
        convertMessage($('#textInput').val());
 
     })
 
-    function convertMessage(message) {
+    $('#convert').on('click', function() {
+        var text = $('#textInput').val()
+        $('#resultTitle').html("Your message in slack talk:")
+        $('#convert').html("Try again")
+        $('#submitButton').html("<button type='submit' class='btn btn-primary' id='sendToSlack'>I like it, send to slack!</button>")
+        $.get('/emoji/' + text, function(response) {
+            $('#emojiMessage').html(response)
+        });
+        $('#sendToSlack').on('click', function() {
+            sendToSlack()
+        })
+    })
+
+    function convertMessage() {
+        var message = $('#textInput').val();
         $.get('/emoji/' + message, function(response) {
             $('#emojiMessage').html(response)
         });

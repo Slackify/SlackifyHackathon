@@ -1,15 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+    <head>
+    </head>
 {{>header}}
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <body>
 <section id="title">
     <div class="container-fluid">
-
-        {{!-- <div class="row">
-            <div class="col-lg-7">
-            </div>
-        </div> --}}
     </div>
 </section>
 <section id="features">
@@ -18,8 +14,12 @@
             <input type="text" class="form-control" id="textInput" placeholder="your message">
             <small id="emailHelp" class="form-text text-muted">We won't send it just yet, you can approve your message first</small>
         </div>
-        <button type="submit" class="btn btn-primary" id="convert">Slackify!</button>
-    <div id='emojiMessage'></div>
+        <div class="result">
+            <h3 id="resultTitle"></h3>
+            <span style="font-size:4rem;width:100%;" id='emojiMessage'></span>
+                <button type="submit" class="btn btn-primary" id="convert">Slackify!</button>
+                <div id="submitButton"></div>
+        </div>
 </section>
 <section id="testimonials">
     <div id="testimonial-carousel" class="carousel slide" data-ride="carousel">
@@ -83,6 +83,8 @@
         </button>
     </div>
 </section>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
     <script src="./js/convertTextToEmoji.js"></script>
 </body>

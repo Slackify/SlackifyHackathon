@@ -19,18 +19,18 @@
     <div class="row">
         <div class="col-lg-4 feature-box">
             <i class="icon fas fa-check-circle"></i>
-            <h3>Easy to use.</h3>
+            <h3>Easy to use</h3>
             <p>So easy to use, even QRM could do it.</p>
         </div>
         <div class="col-lg-4 feature-box">
             <i class="icon fas fa-bullseye"></i>
-            <h3>Elite cars</h3>
-            <p>We have all the cars, the greatest cars.</p>
+            <h3>Elite analysis</h3>
+            <p>State-of-the-art message analysis for precise emojis.</p>
         </div>
         <div class="col-lg-4 feature-box">
             <i class="icon fas fa-heart"></i>
-            <h3>Guaranteed to work.</h3>
-            <p>Deliver your car in style or your money back.</p>
+            <h3>Guaranteed</h3>
+            <p>Deliver your message in style or your money back.</p>
         </div>
     </div>
 </section>
@@ -38,15 +38,13 @@
     <div id="testimonial-carousel" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <h2>I no longer have to visit my local dealership. I've found the hottest Virtual Dealership in town.
-                    Pow!</h2>
-                <img class="testimonial-image" src="/img/boy.svg" alt="man-profile">
-                <em>Chad, London</em>
+                <h2>I no longer have to think about my emotions. Now SlackifyMe tells me how to feel!</h2>
+                <img class="testimonial-image" src="/img/mattlau.jpeg" alt="matt-profile">
+                <em>Matt Lau, London</em>
             </div>
             <div class="carousel-item">
-                <h2 class="testimonial-text">My life used to be so lonely, but with Virtual Dealership, I have been
-                    buzzing all the time. I think.</h2>
-                <img class="testimonial-image" src="/img/girl.svg" alt="lady-profile">
+                <h2 class="testimonial-text">My life used to be so lonely, but with SlackifyMe everybody wants to
+                    message. </h2>
                 <em>Tracy, Warrington</em>
             </div>
         </div>
@@ -57,45 +55,14 @@
     </div>
 </section>
 <section id="tryNow">
-    <div class="container">
-        <h2>Inventory</h2>
-        <div class="row">
-            {{#each carData}}
-                <div class="col-md-4">
-                    <div class="card mb-4 box-shadow">
-                        {{!-- <img class="card-img-top" src={{this.imageURL.[0].outsideImage}} alt="Card image cap"> --}}
-                        <img class="card-img-top"
-                             src={{this.imageURL.[0].outsideImage}}
-                             alt="Card image cap">
-                        <div class="card-body">
-                            <h3>{{this.model.modelId}}</h3>
-                            <p class="card-text">This is a very cool car description</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <a class="btn btn-sm btn-outline-secondary"
-                                       href="/car/{{this.inventoryId}}">View</a>
-                                </div>
-                                <small class="text-muted">{{this.availability}}</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            {{/each}}
-        </div>
-    </div>
+
 </section>
 <!-- Call to Action -->
 <section id="cta">
     <div class="container">
 
         <h3 class="cta-heading">Find the emojis you've been lacking so you can get to slacking!</h3>
-
-        <button type="button" class="btn btn-dark btn-lg download-button"><i class="fab fa-apple"></i>
-            Mobile App
-        </button>
-        <button type="button" class="btn btn-light btn-lg download-button"><i class="fab fa-google-play"></i>
-            Coming Soon
-        </button>
+        <a href="/trynow" class="btn btn-dark btn-lg download-button"> Try it now! </a>
     </div>
 </section>
 </body>

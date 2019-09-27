@@ -40,9 +40,10 @@ app.get('/signup', (req, res) => {
     res.render('sign-up')
 });
 
+app.get('/emoji/:message', (req, res) => {
+    res.send(translate.translate(req.params['message']))
 
-
-app.get('/', (req, res) => res.send('Hello World!'));
+});
 
 
 app.listen(port, () => console.log(`Hey team Slackify! Express app listeing on port ${port}!`));
